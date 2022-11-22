@@ -37,7 +37,7 @@ function addTodo(event) {
      //CHECK TRASH BUTTON
      const trashButton = document.createElement('button');
      trashButton.innerHTML ='<i class="fas fa-trash"></i>';
-     trashButton.classList.add("complete-btn");
+     trashButton.classList.add("trash-btn");
      todoDiv.appendChild(trashButton);
 
      //APPPEND TO LIST
@@ -54,7 +54,7 @@ function deleteCheck(e){
         todo.remove();
         //Animmation
         todo.classList.Add("fall");
-        reemoveLocalTodos(todo); 
+        removeLocalTodos(todo); 
         todo.addEventListener("transitionend", function(){
          todo.remove();   
         });  
@@ -135,7 +135,7 @@ function saveLocalTodos(todo) {
      //CHECK TRASH BUTTON
      const trashButton = document.createElement('button');
      trashButton.innerHTML ='<i class="fas fa-trash"></i>';
-     trashButton.classList.add("complete-btn");
+     trashButton.classList.add("trash-btn");
      todoDiv.appendChild(trashButton);
 
      //APPPEND TO LIST
@@ -144,7 +144,7 @@ function saveLocalTodos(todo) {
      });
  } 
 
- function reemoveLocalTodos(todo){
+ function removeLocalTodos(todo){
       //CHECK--- HEY Do I already have thing in there ?
       let todos;
       if (localStorage.getItem("todos") === null) {
