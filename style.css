@@ -83,17 +83,19 @@ flex: 1;
     transform: translateY(8rem) rotateZ(20deg);
     opacity: 0;
 }
-.completed {
-    text-decoration: line-through;
-    opacity: 0.5;
+
+.todo-item {
+    padding: 0rem 0.5rem;
 }
 .fa-trash,
 .fa-check {
     pointer-events: none;
 }
-.todo-item {
-    padding: 0rem 0.5rem;
-}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+} 
 
 select {
     -webkit-appearance: none;
@@ -108,7 +110,7 @@ select {
     overflow: hidden;
 }
 select {
-    columns: #ff6f47;
+    color: #ff6f47;
     width: 10rem;
     cursor: pointer;
     padding: 1rem;  
