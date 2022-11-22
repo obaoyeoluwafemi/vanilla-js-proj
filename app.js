@@ -53,7 +53,7 @@ function deleteCheck(e){
         const todo = item.parentElement;
         todo.remove();
         //Animmation
-        todo.classList.Add("fall");
+        todo.classList.add("fall");
         removeLocalTodos(todo); 
         todo.addEventListener("transitionend", function(){
          todo.remove();   
@@ -154,5 +154,5 @@ function saveLocalTodos(todo) {
       } 
       const todoIndex = todo.children[0].innerText;
       todos.splice(todos.indexOf(todoIndex), 1);
-      localStorage,setItem("todos", JSON.stringify(todos));
+      localStorage.setItem("todos", JSON.stringify(todos));
  }
